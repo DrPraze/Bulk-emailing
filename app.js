@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.post('/send-emails', upload.single('csv_file'), (req, res, next) => {
   const transporter = nodemailer.createTransport({
-    host: 'lon108.truehost.cloud',
+    host: 'mail.yourserver.com',
     auth: {
       user: req.body.user_email,
       pass: req.body.user_password,
